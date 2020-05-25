@@ -1,0 +1,32 @@
+doctype html
+html
+   head
+      title= title
+      link(rel='stylesheet', href='/stylesheets/website/style.css')
+      link(rel='stylesheet', href='/stylesheets/commons.css')
+   body
+      ul#mainMenu
+         li
+            a(href="/") Reading
+         li
+            a(href="/plan") Plan to Read
+         li
+            a(href="/hold") On-Hold
+         li
+            a(href="/drop" ) Dropped
+         li
+            a(href="/complete") Complete
+         li
+            a(href="/all") All
+      nav
+         if user
+            div
+               a(href="/auth/logout") Logout
+            div
+               p Hi, #{user.username}
+         else
+            div
+               a(href="/auth/login") Login
+            div
+               a(href="/dashboard") Dashboard
+block content

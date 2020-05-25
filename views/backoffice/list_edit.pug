@@ -1,0 +1,51 @@
+extends ../templates/layout_web
+
+block content
+   
+   div.wrapper
+      form(action= `${mangas.id}`, name='editmanga' enctype="multipart/form-data" method="POST" onsubmit="editmanga.disabled = true; return true;")
+         div.each-entry
+            label(for='series') Series name *
+            br
+            input.inputs(type='text' name='series' id='series' required value=mangas.series)
+         div.each-entry
+            label(for='imgurl') Image URL *
+            br
+            input.inputs(type='text' name='imgurl' id='imgurl' required value=mangas.imgurl)
+         div.each-entry
+            label(for='baka') Baka-Updates/Manga-Updates
+            br
+            input.inputs(type='text' name='baka' id='baka' value=mangas.baka)
+         div.each-entry
+            label(for='mal') MyAnimeList
+            br
+            input.inputs(type='text' name='mal' id='mal' value=mangas.mal)
+         div.each-entry
+            label(for='readch') Chapters Read
+            br
+            input.inputs(type='text' name='readch' id='readch' value=mangas.readch)
+         div.each-entry
+            label(for='totalch') Total Chapters
+            br
+            input.inputs(type='text' name='totalch' id='totalch' value=mangas.totalch)
+         div.each-entry
+            label(for='readvol') Volumes Read
+            br
+            input.inputs(type='text' name='readvol' id='readvol' value=mangas.readvol)
+         div.each-entry
+            label(for='totalvol') Total Volumes
+            br
+            input.inputs(type='text' name='totalvol' id='totalvol' value=mangas.totalvol)
+         div.each-entry
+            label(for='status') Status *
+            br
+            input.inputs(type='text' name='status' id='status' required value=mangas.status)
+         div.each-entry
+            input.saveBtn(type="submit", value="Save", name='editmanga')
+      
+      form(action='delete', name='editmanga' method="POST")
+         input(value=mangas.id type="hidden" name="id")
+         input.removeBtn(type="submit", value="Remove", onclick="return confirm('Are you sure you want to delete this manga?');")
+
+      a(href="/dashboard")
+            button.exitBtn Exit

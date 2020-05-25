@@ -1,0 +1,45 @@
+extends ../templates/layout_web
+
+block content
+  div.header
+    h1 Manga I Read That Are Better Off Unfinished
+  div.wrapper
+    for mangas in manga    
+      div.list
+        ul.mangazone
+          h2=mangas.series
+          - if (mangas.baka) 
+            a(href=mangas.baka) Baka-Updates  
+          - if (mangas.baka)
+          - if (mangas.mal)
+            | | 
+          - if (mangas.mal) 
+            a(href=mangas.mal) MyAnimeList
+          div.columns
+            div.mangainfo
+              br
+              br
+              br
+              strong Chapters Read: 
+              | #{mangas.readch}
+              br
+              br
+              br
+              strong Latest Chapter: 
+              | #{mangas.totalch}
+              br
+              br
+              br
+              strong Volumes Read: 
+              | #{mangas.readvol}
+              br
+              br
+              br
+              strong Latest Volume: 
+              | #{mangas.totalvol}
+          br
+          div.cover
+            br
+            img(src=mangas.imgurl)
+          br
+          hr

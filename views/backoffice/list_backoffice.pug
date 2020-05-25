@@ -1,0 +1,17 @@
+extends ../templates/layout_web
+
+block content
+    div.back-content-area 
+        h1 Manga List
+
+        a.create-new-entry(href="/add") Add a new Manga
+            
+        div
+            ul.backoffice-list
+                each mangas in manga
+                    li #{mangas.series}
+                        a(href=`/${mangas.id}`)
+                            button(type="button") Edit
+
+    div
+      a(href="/") < Home

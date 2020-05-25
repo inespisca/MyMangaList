@@ -1,0 +1,47 @@
+extends ../templates/layout_web
+
+block content
+      
+   div.wrapper
+      form(action="/add" name='createmanga' enctype="multipart/form-data" method="POST" onsubmit="savelist.disabled = true; return true;")
+         div.each-entry
+            label(for='series') Series name *
+            br
+            input.inputs(type='text' name='series' id='series' required)
+         div.each-entry
+            label(for='imgurl') Image URL *
+            br
+            input.inputs(type='text' name='imgurl' id='imgurl' required)
+         div.each-entry
+            label(for='baka') Baka-Updates/Manga-Updates
+            br
+            input.inputs(type='text' name='baka' id='baka')
+         div.each-entry
+            label(for='mal') MyAnimeList
+            br
+            input.inputs(type='text' name='mal' id='mal')
+         div.each-entry
+            label(for='readch') Chapters Read
+            br
+            input.inputs(type='text' name='readch' id='readch')
+         div.each-entry
+            label(for='totalch') Total Chapters
+            br
+            input.inputs(type='text' name='totalch' id='totalch')
+         div.each-entry
+            label(for='readvol') Volumes Read
+            br
+            input.inputs(type='text' name='readvol' id='readvol')
+         div.each-entry
+            label(for='totalvol') Total Volumes
+            br
+            input.inputs(type='text' name='totalvol' id='totalvol')
+         div.each-entry
+            label(for='status') Status *
+            br
+            input.inputs(type='text' name='status' id='status' required)
+         div.each-entry
+            input.saveBtn(type="submit", value="Save", name='savelist')
+      
+      a(href="/dashboard")
+            button.exitBtn Exit

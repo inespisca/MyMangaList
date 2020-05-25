@@ -1,0 +1,183 @@
+@import '../commons.scss';
+
+a {
+  text-decoration: none;
+  color: rgb(59, 84, 226);
+}
+
+h1 {
+  text-align: center;
+  color: rgb(15, 41, 189);
+}
+
+h2 {
+  color: rgb(15, 41, 189);
+}
+
+hr {
+  width: 50%;
+  border-width: 1px;
+  color: rgb(15, 41, 189);
+}
+
+strong {
+  color: rgb(15, 41, 189);
+}
+
+button {
+  margin-left: 10px;
+  height: 28px;
+  background: rgb(15, 41, 189);
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+ 
+#mainMenu {
+  padding-inline-start:20%;
+  p,a {
+    margin: 0;
+    padding-left: 5%;
+    color: rgb(15, 41, 189);
+  }
+  .active {
+  color: $title-color;
+  }
+  li {
+    list-style: none;
+    display: inline; 
+    font-size: 16px;
+    padding-right:20px;
+  }
+}
+
+.mangazone {
+  margin-right: 5%;
+}
+
+img {
+  width: auto;
+  height: 250px;
+  padding-left: 50%;
+  margin-top: -20%;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0% auto 0px;
+  text-align: center;
+}
+
+.columns {
+  display: flex;
+  margin-left: 32%;
+}
+
+.cover {
+  margin-right: 5%;
+}
+
+@media only screen and (max-width: 1350px) {
+  .columns {
+    margin-left: 25%;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .columns {
+    margin-left: 20%;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .columns {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  #mainMenu {
+    p,a {
+      padding-left: 10%;
+    }
+  }
+  
+  .columns {
+    margin-left: 10%;
+    margin-right: 30%;
+  }
+  
+  img {
+    width: 200px;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  #mainMenu {
+    p,a {
+      padding-left: 10%;
+    }
+  }
+
+  .columns {
+    margin-left: 0%;
+    margin-right: 30%;
+  }
+  
+  img {
+    width: 200px;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  #mainMenu {
+    p,a {
+      padding-left: 0%;
+    }
+    li { 
+      font-size: 16px;
+    }
+  }
+  
+  .columns {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  img {
+    width: 200px;
+    height: auto;
+    padding-top: 50%;
+    padding-left: -0%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  img {
+    width: 200px;
+    height: auto;
+    padding-top: 50%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  h2 {
+    margin-left: -20%;
+  }
+  ul {
+    margin-right: 2%;
+  }
+  
+  .columns {
+    margin-left: 0%;
+  }
+
+  img {
+    width: 150px;
+    height: auto;
+    padding-left: -5%;
+  }
+}

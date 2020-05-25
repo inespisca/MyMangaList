@@ -1,0 +1,15 @@
+extends ./templates/layout_web
+
+block content
+  div.wrapper
+    h2 Login
+    div
+      a(href="/") Home
+
+    form(action="/auth/login", method="post")
+      div
+          input.inputs(type="username", name="username" placeholder="username" required)
+      div
+          input.inputs(type="password", name="password" placeholder="password" required)
+      div
+          input.logbtn(type="submit", value="Login")
